@@ -9,13 +9,7 @@ android {
 
     defaultConfig {
         applicationId "com.e.python"
-        sourceSets {
-            main {
-                python {
-                    srcDirs = ["src/main/python"]
-                }
-            }
-        }
+
         minSdk 21
         targetSdk 31
         versionCode 1
@@ -27,8 +21,16 @@ android {
         }
         python {
             buildPython "C:/Users/manikandan.r/Downloads/python.exe"
-            pip {
+            /* pip {
                 install "opencv-python"
+            }*/
+        }
+        sourceSets {
+            main {
+                python {
+                    srcDirs = ["src/main/python"]
+                    python.srcDirs = ["src/main/python"]
+                }
             }
         }
     }
