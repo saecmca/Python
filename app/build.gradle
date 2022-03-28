@@ -9,6 +9,13 @@ android {
 
     defaultConfig {
         applicationId "com.e.python"
+        sourceSets {
+            main {
+                python {
+                    srcDirs = ["src/main/java/com/e/python/python/"]
+                }
+            }
+        }
 
         minSdk 21
         targetSdk 31
@@ -20,17 +27,15 @@ android {
             abiFilters "armeabi-v7a", "x86"
         }
         python {
-            buildPython "C:/Users/manikandan.r/Downloads/python.exe"
-            /* pip {
+         //   buildPython "C:/Users/manikandan.r/Downloads/python-3.8.8-amd64.exe"
+             pip {
+                 install "numpy"
+                 install "pandas"
+                 install "scipy"
+                 install "matplotlib"
+                 install "imageio"
+                 install "imutils"
                 install "opencv-python"
-            }*/
-        }
-        sourceSets {
-            main {
-                python {
-                    srcDirs = ["src/main/python"]
-                    python.srcDirs = ["src/main/python"]
-                }
             }
         }
     }

@@ -16,7 +16,8 @@ class MainActivity : AppCompatActivity() {
         }
         val pyInstance = Python.getInstance()
         val pyModule = pyInstance.getModule("ProcessImage")
-        val pyAttribute = pyModule.callAttr("test")
+        val pyAttribute = pyModule.callAttr("test","Mani","  test")
+
         findViewById<TextView>(R.id.tv).text=pyAttribute.toString()
     }
 }

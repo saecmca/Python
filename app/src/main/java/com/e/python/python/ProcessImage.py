@@ -1,4 +1,5 @@
 import cv2
 
-def test():
-    return "testing testing"
+def test(dir,arg):
+    #return "testing testing"
+    return dir+arg
